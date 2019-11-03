@@ -111,16 +111,10 @@
                       </form>
                     </div>
                 </div>
-                  
+
                 
             </div>
-            <script src="js/app.js">
-                  {%if text %}
-                <p>The text extracted is> <b>{{ text}} </b></p>
-                {% else %}
-                No text
-                {% endif %}
-                </script>
+            
           </div>
 
 
@@ -178,5 +172,13 @@ $(window).on("scroll", function() {
                 $(this).next('.custom-file-label').html(fileName);
             })
         </script>
+        <script type="text/javascript">
+         {%if text %}
+                <p>The text extracted is> <b>{{ text}} </b></p>
+                {% else %}
+                No text
+                {% endif %}
+                </script>
+                <script src="js/app.js" type=""></script>
       </body>
 </html>
