@@ -10,19 +10,21 @@ from bs4 import BeautifulSoup
 import requests
 from gensim import corpora
 import gensim
+import textract
 from fuzzywuzzy import fuzz
 from gingerit.gingerit import GingerIt
 from flask import Flask, request,render_template
 from werkzeug.utils import secure_filename
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg','bmp','pdf','svg','epub','docx','txt'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg','bmp','pdf','svg','docx','txt','doc','rtf','odt','epub','csv'])
 app = Flask(__name__, template_folder = './')
 UPLOAD_FOLDER = './'
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 stop_words = stopwords.words("english")
 extensions1 = ['jpg','png','jpeg','bmp','svg']
-extensions2= ['pdf','xps','epub']
+extensions2= ['pdf','xps']
 extensions3=['docx']
 ext4 =['txt']
+ext5 = ['doc','rtf','odt','epub','csv']
 pt.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 # route and function to handle the upload page
 @app.route('/', methods=['GET', 'POST'])
@@ -71,6 +73,8 @@ def upload():
                     c= docu(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 elif file.filename.rsplit('.',1)[1].lower() in ext4:
                    c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
+                elif file.filename.rsplit('.',1)[1].lower() in ext5:
+                   c = textract(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
                     d= str(request.form['message'])
                     if d:
@@ -104,6 +108,9 @@ def txt(text):
     t = open(text,'r',encoding="utf-8", errors='ignore')
     jn = t.read()
     return jn
+def textract(filename):
+    n = textract.process(filename)
+    return n
 def text(text):
     t = text
     return t
