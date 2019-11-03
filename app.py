@@ -41,9 +41,9 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismChecker.html', text=replyy)
+                return render_template('plagiarismchecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
@@ -56,9 +56,9 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismChecker.html', text=replyy)
+                return render_template('plagiarismchecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -92,11 +92,11 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismChecker.html', text=replyy)
+                return render_template('plagiarismchecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
     
-    return render_template('plagiarismChecker.html')
+    return render_template('plagiarismchecker.html')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
