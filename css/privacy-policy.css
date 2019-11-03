@@ -1,14 +1,26 @@
 h2{
 	font-weight: bold !important;
 	font-size: 36px !important;
-	color: #3B1F9E;
 	padding-top: 130px;
 	padding-bottom: 20px;
 }
 .content{
 	font-size: 18px !important;
 	padding: 52px 58px !important; 
-	background-color: #fff ;
-	color: #000;
+	background-color: #3B1F9E ;
+	color: white;
 	border-radius: 0 100px 0 100px;
+	margin: 0 120px !important;
+	}
+.title {
+	margin-left: 105px;
+}
+@media only screen and (max-width: 768px){
+	.content{
+		
+		margin-left: 10px !important;
+	}
+	.title{
+		margin-left: 20px;
+	}
 }
