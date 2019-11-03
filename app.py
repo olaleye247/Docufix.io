@@ -32,7 +32,7 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-            data=str(request.form['message'])
+            data=str(request.form['text'])
             if data == '':
                 dat = str(request.form['url'])
                 c = site(dat)
@@ -47,7 +47,7 @@ def upload():
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
-            data=str(request.form['message'])
+            data=str(request.form['text'])
             if data == '':
                 dat = str(request.form['url'])
                 c = site(dat)
@@ -76,14 +76,14 @@ def upload():
                 elif file.filename.rsplit('.',1)[1].lower() in ext5:
                    c = textract(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
-                    d= str(request.form['message'])
+                    d= str(request.form['text'])
                     if d:
                         c=text(d)
                     else:
                         dat = str(request.form['url'])
                         c = site(dat)  
             except IndexError:
-                d= str(request.form['message'])
+                d= str(request.form['text'])
                 if d:
                     c=text(d)
                 else:
