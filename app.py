@@ -33,8 +33,8 @@ def upload():
         # check if there is a file in the request
         if 'file' not in request.files:
             data=str(request.form['text'])
-            if data == '':
-                dat = str(request.form['url'])
+            if not data:
+                dat = request.form['url']
                 c = site(dat)
             else:
                 c = text(data)
@@ -48,8 +48,8 @@ def upload():
         # if no file is selected
         if file.filename == '':
             data=str(request.form['text'])
-            if data == '':
-                dat = str(request.form['url'])
+            if not data:
+                dat = request.form['url']
                 c = site(dat)
             else:
                 c = text(data)
@@ -76,19 +76,9 @@ def upload():
                 elif file.filename.rsplit('.',1)[1].lower() in ext5:
                    c = textract(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
-                    d= str(request.form['text'])
-                    if d:
-                        c=text(d)
-                    else:
-                        dat = str(request.form['url'])
-                        c = site(dat)  
+                   c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
             except IndexError:
-                d= str(request.form['text'])
-                if d:
-                    c=text(d)
-                else:
-                    dat = str(request.form['url'])
-                    c = site(dat)          
+                c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))        
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
@@ -186,7 +176,8 @@ def word(c):
         e = check(m)
         results= google_search(e,my_api_key,my_cse_id,num=2)
         jj = []    
-        for result in results:   
+        for result in results:
+            try:
                url=result["link"]   
                html_content = requests.get(url) 
                soup = BeautifulSoup(html_content.content, 'html.parser')
@@ -196,6 +187,8 @@ def word(c):
                    vv = v[x].get_text()
                    bb = bb+' '+vv
                jj.append(bb)
+            except TypeError:
+                jj=[]
         gg.append(jj)
    elif len(tp)<2:
        gg =[]
