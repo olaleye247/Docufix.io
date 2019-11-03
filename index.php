@@ -3,7 +3,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,53 +14,42 @@
 <body>
     <!--Header-->
     <header>
-          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+        <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-5 ml-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             </button>
-          
+        
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto px-5">
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="about_us.html">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tools
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
-                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
-                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
-                    <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
-                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Support
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item text-justify" href="faq.html">FAQ</a>
-                    <a class="dropdown-item text-justify" href="contact.html">Contact Us</a>
-                    <a class="dropdown-item text-justify" href="why-use-docufix.html">Why use Docufix</a>
-                    <a class="dropdown-item text-justify" href="privacy.html">Privacy Policy</a>
-                    <a class="dropdown-item text-justify" href="termsOfService.html">Terms of Service</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-center" href="teampage.html">Our Team</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Log In</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="signup.php">Sign Up</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto px-5">
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="about_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tools
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item text-justify" href="./fileUpload.html">Compare files</a>
+                            <a class="dropdown-item text-justify" href="./grammarChecker.html">Grammar Check</a>
+                            <a class="dropdown-item text-justify" href="./fileDuplicate.html">Check for Duplicates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="login.php">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="signup.php">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#">Get Started</a>
+                    </li>
+                </ul>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <section class="banner-wrapper">
@@ -75,11 +63,11 @@
         </div>
 
         <div class="banner-img">
-            <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1572780850/workflow_kdglvx.png" alt="workflow" />
+
         </div>
     </section>
 
-    <section class="content-wrapper ">
+    <section class="content-wrapper">
         <div class="content">
             <!-- <div class="about-wrapper">
                 <h3>About Docufix</h3>
@@ -181,31 +169,30 @@
 
     <!--Footer-->
     <footer id="footer">
-              <div class="container mt-3 mb-3">
-                <div class="row">
-                  <div class="col-sm-12 text-center">
-                      <ul class="list-inline text-center">
-                          <li class="list-inline-item">
-                            <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
-                          </li>
-                          <li class="list-inline-item">
+        <div class="container mt-3 mb-3">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a class="text-center" href="#">&copy; 2019 Copyright HNG Internship</a>
+                        </li>
+                        <li class="list-inline-item">
                             <a class="text-center" href="faq.html">FAQ</a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a class="text-center" href="contact.html">Contact us</a>
-                          </li>
-                          <li class="list-inline-item">
-                              <a class="text-center" href="privacy.html">Privacy Policy</a>
-                          </li>
-                          <li class="list-inline-item">
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="feedback.html">Feedback</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="text-center" href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
                             <a class="text-center" href="termsOfService.html">Terms of Service</a>
-                          </li>
-                        </ul>
-                  </div>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-              <p class="text-center">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
-      </footer>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -215,7 +202,7 @@
         AOS.init();
     </script>
     <script>
-        var SCROLLING_NAVBAR_OFFSET_TOP = 50;
+        var SCROLLING_NAVBAR_OFFSET_TOP = 100;
         $(window).on("scroll", function() {
             var $navbar = $(".navbar");
         
