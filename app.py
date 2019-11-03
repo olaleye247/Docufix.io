@@ -30,29 +30,33 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-           data=str(request.form['message'])
-           c = text(data)
-           q,t = sim(c)
-           if q == '':
+            data=str(request.form['message'])
+            if data == '':
+                dat = str(request.form['url']
+                c = site(dat)
+            else:
+                c = text(data)
+            q,t = sim(c)
+            if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
+                return render_template('plagiarismChecker.html', text=replyy)
             # extract the text and display it
-           return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
             data=str(request.form['message'])
             if data == '':
-                c = text(data)
+                dat = str(request.form['url']
+                c = site(dat)
             else:
-               dat = str(request.form['url']
-               c = site(dat)
+                c = text(data)
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
+                return render_template('plagiarismChecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -68,20 +72,27 @@ def upload():
                 elif file.filename.rsplit('.',1)[1].lower() in ext4:
                    c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
-                    d= request.form.get('text')
-                    c = text(d)
+                    d= str(request.form['message'])
+                    if d:
+                        c=text(d)
+                    else:
+                        dat = str(request.form['url']
+                        c = site(dat)  
             except IndexError:
-                d= request.form.get('text')
-                c=text(d)
-          
+                d= str(request.form['message'])
+                if d:
+                    c=text(d)
+                else:
+                    dat = str(request.form['url']
+                    c = site(dat)          
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
+                return render_template('plagiarismChecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.html', text='Result: '+q+', percentage match: '+t)
     
-    return render_template('plagiarism.html')
+    return render_template('plagiarismChecker.html')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
