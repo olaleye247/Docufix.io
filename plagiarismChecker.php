@@ -101,32 +101,39 @@
                     <h6>Please enter your text below and Check! </h6>
                 </div> 
                 
-                <div class="form-group col-11 mt-3">
-                    <textarea class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="Type or paste here.." maxlength="1000"></textarea>
-                </div>
+                <form method="post" class="form-group col-11 mt-3" name="text">
+                    <textarea type="text" name="text" class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="Type or paste here.." maxlength="1000" ></textarea>
+                    <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                      <a href="#"><button type="button" class=" btn">Check!</button></a>
+                    </div>
+                </form>
                 <div class="row container mx-3 justify-content-between mt-4">
                     <div class="col-lg-5 col-xs-12 col-sm-12 upload">
                       <h6>Or Upload File (.tex, .txt, .doc, .docx, .odt, .pdf, .rtf):</h6>
-                      <div class="custom-file">
+                      <form method="post" class="custom-file" enctype="multipart/form-data" name="file">
                         <input type="file" class="custom-file-input" id="customFileLang" lang="en">
-                        <label class="custom-file-label" for="customFileLang">Choose File</label>
-                      </div>
+                        <label class="custom-file-label" for="customFileLang"></label>
+                        <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                          <a href="#"><button type="button" class=" btn">Check!</button></a>
+                        </div>
+                      </form>
                     </div>
                     <div class="col-lg-5 col-xs-12 col-sm-12 url">
                       <h6 class="url-txt">Check Plagiarism via Webpage URL</h6>
-                      <form>
+                      <form method="post" name="url">
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
                             <button class="btn btn-url" type="button">@</button>
                           </div>
                           <input type="url" class="form-control" placeholder="url"> 
                         </div>
+                         <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                            <a href="#"><button type="button" class=" btn">Check!</button></a>
+                        </div>
                       </form>
                     </div>
                 </div>
-                <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
-                    <a href="#"><button type="button" class=" btn">Check!</button></a>
-                </div>
+
             </div>
                  {%if text %}
                 <p>The text extracted is> <b> {{text}} </b></p>
