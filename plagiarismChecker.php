@@ -128,6 +128,13 @@
                     <a href="#"><button type="button" class=" btn">Check!</button></a>
                 </div>
             </div>
+                 {%if text %}
+                <p>The text extracted is> <b> {{text}} </b></p>
+                {% else %}
+                No text
+                {% endif %}
+    
+                <script src="js/app.js" type=""></script>
             
           </div>
         </div> 
