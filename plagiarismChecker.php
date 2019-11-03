@@ -104,18 +104,18 @@
                 <form method="post" class="form-group col-11 mt-3" name="text">
                     <textarea type="text" name="text" class="form-control rounded-0" id="FormControlTextarea" rows="15" placeholder="Type or paste here.." maxlength="1000" ></textarea>
                     <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                     <input type="submit" class="btn btn-primary" value="Check!">
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Check!">
                 </form>
                 <div class="row container mx-3 justify-content-between mt-4">
                     <div class="col-lg-5 col-xs-12 col-sm-12 upload">
                       <h6>Or Upload File (.tex, .txt, .doc, .docx, .odt, .pdf, .rtf):</h6>
                       <form method="post" class="custom-file" enctype="multipart/form-data" name="file">
-                        <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="en" name="file">
                         <label class="custom-file-label" for="customFileLang"></label>
                         <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
+                         <input type="submit" class="btn btn-primary" value="Check!">
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Check!">
                       </form>
                     </div>
                     <div class="col-lg-5 col-xs-12 col-sm-12 url">
@@ -125,7 +125,7 @@
                           <div class="input-group-prepend">
                             <button class="btn btn-url" type="button">@</button>
                           </div>
-                          <input type="url" class="form-control" placeholder="url"> 
+                          <input type="url" class="form-control" placeholder="url" name="url"> 
                         </div>
                          <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
                         </div>
