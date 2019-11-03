@@ -172,13 +172,13 @@ $(window).on("scroll", function() {
                 $(this).next('.custom-file-label').html(fileName);
             })
         </script>
-        <script type="text/javascript">
-         {%if text %}
-                <p>The text extracted is> <b>{{ text}} </b></p>
+
+                {%if text %}
+                <p>The text extracted is> <b> {{text}} </b></p>
                 {% else %}
                 No text
                 {% endif %}
-                </script>
+    
                 <script src="js/app.js" type=""></script>
       </body>
 </html>
