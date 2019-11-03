@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "login.php">Home</a></button></div>';
+                                    Record Saved Successfully <button class="btn"><a href = "index.html">Home</a></button></div>';
                                             echo ($message);
 
                     }
@@ -256,7 +256,7 @@ if(isset($_POST['submit'])){
 
                
 
-                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="index.php"><span>Sign in</span></a></p>
+                <p class="Already-acc">Already have an account?&nbsp;&nbsp; <a href="login.php"><span>Sign in</span></a></p>
             </form>
             <span class="error"></span>
         </section>
