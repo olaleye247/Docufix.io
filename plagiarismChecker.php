@@ -106,6 +106,7 @@
                     <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
                       <a href="#"><button type="button" class=" btn">Check!</button></a>
                     </div>
+                    <input type="submit" class="btn btn-primary" value="Upload">
                 </form>
                 <div class="row container mx-3 justify-content-between mt-4">
                     <div class="col-lg-5 col-xs-12 col-sm-12 upload">
@@ -116,6 +117,7 @@
                         <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
                           <a href="#"><button type="button" class=" btn">Check!</button></a>
                         </div>
+                        <input type="submit" class="btn btn-primary" value="Upload">
                       </form>
                     </div>
                     <div class="col-lg-5 col-xs-12 col-sm-12 url">
@@ -130,12 +132,13 @@
                          <div class="col-lg-2 col-xs-12 col-sm-12 btn-3 text-center mt-5 mb-5 justify-content-center">
                             <a href="#"><button type="button" class=" btn">Check!</button></a>
                         </div>
+                        <input type="submit" class="btn btn-primary" value="Upload">
                       </form>
                     </div>
                 </div>
 
             </div>
-                 {%if text %}
+                {%if text %}
                 <p>The text extracted is> <b> {{text}} </b></p>
                 {% else %}
                 No text
