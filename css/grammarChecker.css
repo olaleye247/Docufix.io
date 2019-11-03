@@ -1,17 +1,17 @@
 
-			body {
-				overflow-x: hidden;
-			}
+			
              
     
-p, li {
+/*p, li {
 	font-size: 1.4em;
-}
+}*/
 
 h1 {
 	font-size: 2.1em;
 }
-
+a :hover{
+background-color: #141460;
+}
 h3 {
 	font-size: 1.6em;
 }
@@ -27,7 +27,7 @@ textarea {
 	border: 3px solid brown;
 	padding: 5px;
 	font-family: Tahoma, sans-serif;
-	background-image: url(bg.gif);
+	/*background-image: url(bg.gif);*/
 	background-position: bottom right;
 	background-repeat: no-repeat;
    /* display: block;
@@ -48,10 +48,13 @@ textarea {
 			
       @media screen and (max-width: 600px) {
   
-  #showpic{
-          height: 60%;
-          width: 60%;
-        }
+  #setDiv{
+	display: flex;
+    justify-content: center;
+font-size: 1em;
+  }
+  
+
         .btn{
           width: 10px;
           height: 10px;
@@ -222,5 +225,7 @@ textarea {
   -webkit-animation-name: bounce;
   animation-name: bounce;
 }
+
+
       
     

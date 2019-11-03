@@ -92,14 +92,13 @@ color: #3B1F9E;
 	font-weight: 800;
 	font-size: 18px;
 	line-height: 130%;
-	padding-left: 27px;
-    padding-top: 12px;
+	
     color: #3B1F9E;
     background: #f6f8f9;
     
 }
 
-.switch-btn-text {
+/* .switch-btn-text {
 	position: absolute;
     right: 560px;
     width: 130px;
@@ -110,17 +109,27 @@ color: #3B1F9E;
 .switch-btn-file{
     position: relative;
 
-}
+} */
 
 .tab-active{
     background: #3B1F9E;
-    color: #fff
+    color: #fff;
+    height: inherit;
+    width: inherit;
 }
+
+
+.active1 span {
+    color: white;
+    font-weight: bold;
+    background-color: #3b1f9e;
+}
+
 
 .upload-container {
 	background: #F6F8F9;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-	width: 50%;
+	width: 100%;
     margin: auto;
     padding: 10px;
     

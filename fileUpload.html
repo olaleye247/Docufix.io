@@ -1,33 +1,35 @@
 <!DOCTYPE html>
  <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Docufix | Header & Footer</title>
+      <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Docufix | Compare Files</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#3B1F9E" />
+        <link rel="manifest" href="manifest.json" />
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">
-  <link rel="stylesheet" type="text/css" href="css/fileupload.css">
-  <link rel="stylesheet" type="text/css" href="css/header&footer.css">
-  
-  <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
-    apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
-    </script>
-    </head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">
+        <link rel="stylesheet" type="text/css" href="css/fileupload.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
+      
+       <script type="text/javascript" src ="//widget.instabot.io/jsapi/rokoInstabot.js" crossorigin>
+        apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
+      </script>
+    </head>
     <body style="background-color:  white; font-family: Ubuntu;"
     onload="view()">
         <!--Header-->
         <div class="w3-container" >
             <div id="id01" class="w3-modal" >
-              <div class="w3-modal-content mb-0">
+              <div class="w3-modal-content mb-2 mt-5 mt-md-0 mx-auto" style="max-width: 100%">
                 <span onclick="document.getElementById('id01').style.display='none'"
                   class="w3-button w3-display-topright mb-0">&times;</span>
                   
@@ -72,37 +74,52 @@
             </div>
           </div>
           <header>
-            <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-              <a class="navbar-brand px-3 ml-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto px-5">
-                  <li class="nav-item">
-                    <a class="nav-link text-center mx-4" href="about_us.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-center mx-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tools
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item text-justify" href="#">Compare files</a>
-                      <a class="dropdown-item text-justify" href="#">Grammar Check</a>
-                      <a class="dropdown-item text-justify" href="#">Check for Duplicates</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center mx-4" href="#">Login</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-center mx-4" href="#">Get Started</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-      </header>  
+          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="about_us.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tools
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
+                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Support
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="faq.html">FAQ</a>
+                    <a class="dropdown-item text-justify" href="contact.html">Contact Us</a>
+                    <a class="dropdown-item text-justify" href="why-use-docufix.html">Why use Docufix</a>
+                    <a class="dropdown-item text-justify" href="privacy.html">Privacy Policy</a>
+                    <a class="dropdown-item text-justify" href="termsOfService.html">Terms of Service</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="login.php">Login</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+    </header>
         <!--Body-->
         <div id="main">
 
@@ -115,7 +132,7 @@
                         <div class="row pt-2">
                             <div class=" mx-auto bg-light my-auto " style="border-radius: 50%;height: 120px; min-width: 120px;color: white;"> </div>
                             <div class="col-md-8 p-2 text">
-                                <h4 class="font-weight-bold">Compare Files:</h4>
+                                <h4 class="">Compare Files:</h4>
                                 <p> Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management. </p>
                             </div>
                         </div>
@@ -123,7 +140,7 @@
                     <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
                             <h5 class="mb-5" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
                             <a class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
-                            <a class="btn btn-sm rounded-pill font-weight-bold mt-md-0" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
+                            <a class="btn btn-sm rounded-pill font-weight-bold mt-md-0 mt-sm-0 mt-xs-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
                             <div class="btn float-right " style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
                     </div>
                 </div>
@@ -142,11 +159,11 @@
               <div class="row mt-5">
                   <div class="col-md-12 text-center">
                     <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
-                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn"><a href="#" class=" px-5 py-3 rounded-pill "
-                        style="text-decoration: none; margin-right: 10px;">File</a></div>
-                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn"><a class="px-5 py-3 rounded-pill " href="#"
+                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill "
+                        style="text-decoration: none; margin-right: 10px;">File</span></div>
+                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill " 
                         style="text-decoration: none; margin-left: 10px">Text
-                      </a></div>
+                      </span></div>
                   </div>
                   </div>
               </div>
@@ -158,19 +175,20 @@
                         <div class="">
                           <div class="card card-body   p-0 p-1" style="background-color: rgb(229, 236, 240);">
                             <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-4" style="border-radius: 50%;height: 100%; width: 20%"><img
-                                src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg"
-                                class="p-2" width="100%"></div>
+                            <div class=" mx-auto bg-light mt-4 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
+                                class="p-2" width="100%" ></div>
                             <div class="custom-file col-md-8 mx-auto pt-3" style="color: #0C105F">
+                                
                               <label for="upload1" id="label1" class="text-center mr-md-5 pt-5"
-                                style=""> <span id="labell1" class="pl-4" style=" color:#828282; cursor: pointer;">Click to add a file</span> 
+                                style=""> <div id="labell1" class="pb-3 pl-md-5" style=" color:#828282; cursor: pointer;font-weight: normal"></div><span  class="pl-md-5" style=" color:#828282; cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">Click to add file</span> 
                                 <input id="upload1" type="file" name="file1" accept="" class="custom-file-input"
-                                  style="border: 0;background-color:rgba(61, 155, 218, 0.4);" required />
-                                <div class="invalid-feedback">
+                                  style="border: 0;background-color:rgba(61, 155, 218, 0.4);position: absolute" required />
+                                <div class="invalid-feedback pl-md-5">
                                   No Images Allowed
                                 </div></label>
                                 <button style="color:  #828282;" id="uploadUrlBtn" type="submit" value="submit"
-                                class="btn btn-link">upload via URL</button>
+                                class="btn btn-link"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">upload via URL</button>
                             </div>
                           </div>
                         </div>
@@ -180,30 +198,31 @@
                         <div class="pb-5">
                           <div class="card card-body p-0 p-1" style="background-color: rgb(229, 236, 240);">
                             <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-3" style="border-radius: 50%;height: 100%; width: 20%"><img
-                                src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg"
+                            <div class=" mx-auto bg-light mt-3 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
                                 class="p-2" width="100%"></div>
                             <div class=" col-md-8 mx-auto pt-3">
+                                
                               <label for="upload2" id="label2" class="text-center mr-md-5 pt-5"
-                                style=""> <span id="labell2" class="pl-4" style=" color:#828282;cursor: pointer;">Click to add a file</span> 
+                                style=""><div id="labell2" class="pb-3 pl-md-5" style=" color:#828282;cursor: pointer;font-weight: normal"></div> <span  class="pl-md-5" style=" color:#828282;cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">Click to add file</span> 
                                 <input id="upload2" for="secondDocument" type="file" name="file2" accept=""
-                                  class="custom-file-input" style="border: 0;background-color: transparent;" required />
+                                  class="custom-file-input m-0 p-0" style="border: 0;background-color: transparent;position: absolute" required />
                                   
-                              <div class="invalid-feedback">
+                              <div class="invalid-feedback pl-md-5">
                                 No Images Allowed
                               </div>
                                 </label>
                                 <button style="color:  #828282;" id="uploadUrlBtn" type="submit" value="submit"
-                          class="btn btn-link">upload via URL</button>
+                          class="btn btn-link"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">upload via URL</button>
                             </div>
                             </div>
                         </div>
                         </div>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" style="margin-bottom: 1em;">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadBtn" type="submit" value="submit"
-                        class="btn text-light rounded-pill px-3">Compare</button>
+                        class="btn text-light rounded-pill px-5">Compare</button>
           
                          
                     </div>
@@ -446,12 +465,59 @@
                     <a href="#" data-command='superscript'><i class='fa fa-superscript'></i></a>
                   </div>
                   <div id="page"></div>
-                  <div contenteditable="true" id="textareaDifferences"
+                  <div contenteditable="true" id="textareaDifferences" class ="test1"
                     style="border:none;min-height:100%; width: 100%;overflow: scroll; box-shadow: 0px 0px 4px 1px grey;"></div>
                 </div>
                 <button onclick="document.getElementById('id02').style.display='block'" class="btn-dark mt-2 mb-5"
                   style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Download <strong>HERE</strong></button>
           
+                  <!--JOVIA SAV AS EMAIL BUTTON-->
+                  <button id ="btn" onclick="CopyDivsToTextArea();" data-toggle="modal"  data-target="#myModal2" class="btn-dark mt-2 mb-5"
+                  style="padding: 7px 14px;"><i class="fas fa-cloud-download-alt"></i>Save As <strong>Email</strong></button>
+          
+
+                  <!--JOVIAL SAVE AS EMAIL MODAL-->
+
+
+                  <div class="modal fade" id="myModal2" role="dialog">
+                    <div class="modal-dialog">
+                    
+            <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      
+                    </div>
+                    <div class="modal-body">
+                    <form method="POST" action="mailsub.php" id="form">
+                    <p id="msg" name="msg" class="msgbox"></p>
+                      
+                    <input type="text"  id="email" name="docName" placeholder="Please input a doc name" required>
+                       <select type="select" id="email" name="select">
+                        <option value="txt" selected>select doc type</option>
+                        <option value=".txt"> .txt </option>
+                        <option value=".pdf"> .pdf</option>
+                        <option value=".docx"> .docx </option>
+                        <option value=".epub">.epub </option>
+                        <option value=".doc"> .doc</option>
+                       </select>
+                       <input type="email" id="email" name="mail" placeholder="Please input your email Address..." required>
+                            <br />
+                            <textarea id="ta" cols="50" rows="20" name="txt"></textarea>
+                            <br />
+              <!--  -->
+               
+                    <div class="modal-footer">
+                            <button type="submit" name="submit" id="closeSend" class="btn btn-default">Send!</button>
+                      </form>
+            
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            
+
                 <!---MODAL FOR SAVE AS-->
           
           
@@ -545,31 +611,33 @@
             
         <!--Footer-->
         <footer id="footer">
-          <div class="container mt-3 mb-3">
-            <div class="row">
-              <div class="col-sm-12 text-center">
-                  <ul class="list-inline text-center">
-                      <li class="list-inline-item">
-                        <a class="text-center" href="#">&copy; 2019 Copyright HNG Internship</a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a class="text-center" href="faq.html">FAQ</a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a class="text-center" href="feedback.html">Feedback</a>
-                      </li>
-                      <li class="list-inline-item">
-                          <a class="text-center" href="privacy.html">Privacy Policy</a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a class="text-center" href="#">Terms of Service</a>
-                      </li>
-                    </ul>
+              <div class="container mt-3 mb-3">
+                <div class="row">
+                  <div class="col-sm-12 text-center">
+                      <ul class="list-inline text-center">
+                          <li class="list-inline-item">
+                            <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="faq.html">FAQ</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="contact.html">Contact us</a>
+                          </li>
+                          <li class="list-inline-item">
+                              <a class="text-center" href="privacy.html">Privacy Policy</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                          </li>
+                        </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+              <p class="text-center">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
   </footer>
         
+        <script src="js/app.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -1312,5 +1380,76 @@ $(window).on("scroll", function() {
             }
             
             </script>
+
+
+<!--JOVIAL SAVE AS EMAIL SCRIPT BY MAJOR-->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var delay = 2000;
+    $("#form").submit(function(event){
+      event.preventDefault();
+
+      var email = $('#email').val();
+      if (email == ''){
+        $('.msgbox').html(
+          '<span> Please input field is not suppose to be empty</span>'
+        );
+
+        $('#email').focus();
+        return false;
+      }
+     
+     $('#msg').html('');
+     var values = $(this).serialize();
+       $.ajax ({
+     
+        url : "mailsub.php",
+        type: "POST",
+        data:  $(this).serialize(),
+        beforeSend: function(){
+          $('.msgbox').html(
+            '<span><img src="Loader.gif" width="25" height="25"/> <span style="color:green"> Please wait a sec</span>'
+          );
+        }
+
+      }).done (function(data) {
+          
+        setTimeout(function() {
+                $('.msgbox').html(data);
+                $('#closeSend').hide();
+                $('#ta').hide();
+                $('#email').hide();
+            }, delay);
+        });
+     
+    });
+  });
+
+</script>
+
+<script type="text/javascript">
+
+
+
+
+function CopyDivsToTextArea()
+{
+    var divs = document.getElementsByTagName("div");
+    var textToTransfer = "";
+    var pattern = new RegExp("test1");
+
+   for(var i=0;i<divs.length;i++)
+    {
+    if(pattern.test(divs[i].className))
+        {
+           textToTransfer += (divs[i].innerText || divs[i].textContent);
+        }
+     }
+ document.getElementById("ta").value = textToTransfer;
+}
+
+</script>
+
     </body>
 </html>

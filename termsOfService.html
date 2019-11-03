@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Docufix | Terms of Service</title>
         <meta name="description" content="terms of service">
+        <meta name="theme-color" content="#3B1F9E" />
+        <link rel="manifest" href="manifest.json" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/header&footer.css">
@@ -16,44 +18,57 @@
     <body>
         <!--Header-->
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-              <a class="navbar-brand px-3 ml-3" href="#"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX"></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto px-5">
-                  <li class="nav-item">
-                    <a class="nav-link text-center mx-4" href="about_us.html">About Us</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-center mx-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tools
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item text-justify" href="#">Compare files</a>
-                      <a class="dropdown-item text-justify" href="#">Grammar Check</a>
-                      <a class="dropdown-item text-justify" href="#">Check for Duplicates</a>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-center mx-4" href="#">Login</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link text-center mx-4" href="#">Get Started</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-      </header>  
+          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="about_us.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tools
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="fileUpload.html">Compare files</a>
+                    <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
+                    <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
+                    <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
+                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Support
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-justify" href="faq.html">FAQ</a>
+                    <a class="dropdown-item text-justify" href="contact.html">Contact Us</a>
+                    <a class="dropdown-item text-justify" href="why-use-docufix.html">Why use Docufix</a>
+                    <a class="dropdown-item text-justify" href="privacy.html">Privacy Policy</a>
+                    <a class="dropdown-item text-justify" href="termsOfService.html">Terms of Service</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="teampage.html">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="login.php">Login</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+    </header>
         <!--Main-->
         <main>
-           <div class="container mt-2 text-center">
+           <div class="container mt-5 text-center">
              <div class="row">
                <div class="col-sm-12">
-                 <h1 class="mt-5">User Agreement</h1>
-                 <p class="text-center">Date Of Last Revision:October 20, 2019</p>
                  <!--<ul class="list-inline  sticky-top text-center ">
                         <li class="list-inline-item"><a href="#Introduction">Introduction</a></li>
                         <li class="list-inline-item"><a href="#Scope of Services">Scope of Services</a></li>
@@ -67,7 +82,7 @@
                         <li class="list-inline-item"><a href="#Notices">Notices</a></li>
                     </ul>-->
                  <section id="Introduction" class="text-justify mt-5">
-                    <h3>Introduction</h3>
+                    <h3>User Agreement</h3>
                     <p>Docufix.ga (the "Site") and its services are maintained by HNG Tech and offered to you, the user ("You"), conditioned upon Your acceptance of the terms, conditions, and notices contained herein without modification (the "User Agreement"). <br>By clicking the "I Agree to the above Terms & Conditions" box below You: 
                         <ol>
                             <li>Represent that You have read and understand, and have the capacity and authority to enter into, this User Agreement; and </li>
@@ -119,37 +134,39 @@
                     <h3>Notices</h3>
                     <p>Please direct all inquiries regarding the Privacy Policy as follows: Contact us by email at legal@docufix.ga In the subject line, type "HNG TECH Privacy Policy."</p>
                  </section>
-                   <a href="disclaimer.html" class="text-center mt-3 disclaimer">Disclaimer</a>
+                   <a href="disclaimer.html" class="btn  p-2  btn-outline-dark" style="font-weight: bold;margin-bottom:20px;">Disclaimer</a>
                </div>
              </div>
            </div>
         </main>
         <!--Footer-->
         <footer id="footer">
-            <div class="container mt-3 mb-3">
-              <div class="row">
-                <div class="col-sm-12 text-center">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                          <a class="text-center" href="#">&copy; 2019 Copyright HNG Internship</a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a class="text-center" href="faq.html">FAQ</a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a class="text-center" href="feedback.html">Feedback</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="text-center" href="privacy.html">Privacy Policy</a>
-                        </li>
-                        <li class="list-inline-item">
-                          <a class="text-center" href="#">Terms of Service</a>
-                        </li>
-                      </ul>
+              <div class="container mt-3 mb-3">
+                <div class="row">
+                  <div class="col-sm-12 text-center">
+                      <ul class="list-inline text-center">
+                          <li class="list-inline-item">
+                            <a class="text-center" href="#">&copy; 2019 Copyright Docufix</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="faq.html">FAQ</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="contact.html">Contact us</a>
+                          </li>
+                          <li class="list-inline-item">
+                              <a class="text-center" href="privacy.html">Privacy Policy</a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a class="text-center" href="termsOfService.html">Terms of Service</a>
+                          </li>
+                        </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-    </footer>
+              <p class="text-center">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
+      </footer>
+      <script src="js/app.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

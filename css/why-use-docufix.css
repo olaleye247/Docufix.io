@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 .container{
@@ -32,22 +32,33 @@ footer,nav{
 	height: auto;
 }
 
+.mw-300{
+	max-width: 300px !important;
+}
+
 .grey-row{
-	background: #E9ECEF;
-	padding: 2rem;
+	background: #fff;
+	padding: 4rem 2rem;
 	border-radius: 6px;
+}
+
+.col img{
+	max-width: 100%;
+    width: 400px;
 }
 
 @media (min-width: 1200px){
 	.h-title{
-	font-size: 2.68rem;
+	font-size: 2.25rem;
 	font-weight: bold;
 	line-height: 1.4em;
+	color: #3b1f9e;
 }
 
 .h-content{
-	font-size: 1.25rem;
+	font-size: 1.125em;
     line-height: 1.5em;
+    color: #11092C;
 }
 
 .why-content-col{
@@ -67,11 +78,18 @@ footer,nav{
 .h-title{
 	font-size: 1.5rem;
 	line-height: 1.5em;
+	font-weight: bold;
+	color: #3b1f9e;
 }
 
 .h-content{
 	font-size: 1.1rem;
     line-height: 1.5em;
+    color: #11092C;
+ }
+
+ .why-content-col{
+ 	order:-1;
  }
 }
 

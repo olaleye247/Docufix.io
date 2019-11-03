@@ -101,13 +101,17 @@
       textarea{
           width: 100% !important;
       } */
-      #main{
-          background:  #E5E5E5;
-      }
-#navbarNavDropdown a, #navbar-brand,h4, p{
+#main {
+    background: #e5e5e5;
+    padding-bottom: 2em;
+}
+#navbarNavDropdown a,
+#navbar-brand,
+h4,
+p {
     color: rgba(12, 10, 90, 0.8);
 }
-a {
+span {
     color: rgba(12, 10, 90, 0.8);
     font-weight: bold;
 }
@@ -115,10 +119,10 @@ a:hover {
     text-decoration: none;
 }
 
-.active1 a{
+.active1 span {
     color: white;
     font-weight: bold;
-    background-color: #3B1F9E;
+    background-color: #3b1f9e;
 }
 
 textarea {
