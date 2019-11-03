@@ -42,7 +42,11 @@ def upload():
         # if no file is selected
         if file.filename == '':
             data=str(request.form['message'])
-            c = text(data)
+            if data == '':
+                c = text(data)
+            else:
+               dat = str(request.form['url']
+               c = site(dat)
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
@@ -92,6 +96,15 @@ def txt(text):
 def text(text):
     t = text
     return t
+def site(url):
+    html_content = requests.get(url) 
+    soup = BeautifulSoup(html_content.content, 'html.parser')
+    v = soup.findAll('p')
+    bb=''
+    for x in range(len(v)):
+        vv = v[x].get_text()
+        bb = bb+' '+vv  
+    return bb
 def docu(filename):
     doc = docx.Document(filename)
     fullText = []
