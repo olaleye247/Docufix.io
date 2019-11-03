@@ -34,7 +34,7 @@ def upload():
         if 'file' not in request.files:
             data=str(request.form['text'])
             if not data:
-                dat = request.form['url']
+                dat = str(request.form['url'])
                 c = site(dat)
             else:
                 c = text(data)
@@ -49,7 +49,7 @@ def upload():
         if file.filename == '':
             data=str(request.form['text'])
             if not data:
-                dat = request.form['url']
+                dat = str(request.form['url'])
                 c = site(dat)
             else:
                 c = text(data)
