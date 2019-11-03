@@ -136,3 +136,9 @@ justify-content: space-between;
 		margin-bottom: 35px !important;
 	}
 }
+@media (min-width: 992px) and (max-width : 1200px){
+	.other{
+		margin-left: 30px !important;
+		
+	}
+}
