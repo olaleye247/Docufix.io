@@ -10,4 +10,17 @@ h2{
 	background-color: #3B1F9E ;
 	color: white;
 	border-radius: 0 100px 0 100px;
+	margin: 0 120px !important;
+	}
+.title {
+	margin-left: 105px;
+}
+@media only screen and (max-width: 768px){
+	.content{
+		
+		margin-left: 10px !important;
+	}
+	.title{
+		margin-left: 10px;
+	}
 }
