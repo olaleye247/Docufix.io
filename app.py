@@ -34,7 +34,7 @@ def upload():
         if 'file' not in request.files:
             data=str(request.form['message'])
             if data == '':
-                dat = str(request.form['url']
+                dat = str(request.form['url'])
                 c = site(dat)
             else:
                 c = text(data)
@@ -49,7 +49,7 @@ def upload():
         if file.filename == '':
             data=str(request.form['message'])
             if data == '':
-                dat = str(request.form['url']
+                dat = str(request.form['url'])
                 c = site(dat)
             else:
                 c = text(data)
@@ -80,14 +80,14 @@ def upload():
                     if d:
                         c=text(d)
                     else:
-                        dat = str(request.form['url']
+                        dat = str(request.form['url'])
                         c = site(dat)  
             except IndexError:
                 d= str(request.form['message'])
                 if d:
                     c=text(d)
                 else:
-                    dat = str(request.form['url']
+                    dat = str(request.form['url'])
                     c = site(dat)          
             q,t = sim(c)
             if q == '':
