@@ -10,19 +10,21 @@ from bs4 import BeautifulSoup
 import requests
 from gensim import corpora
 import gensim
+import textract
 from fuzzywuzzy import fuzz
 from gingerit.gingerit import GingerIt
 from flask import Flask, request,render_template
 from werkzeug.utils import secure_filename
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg','bmp','pdf','svg','epub','docx','txt'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg','bmp','pdf','svg','docx','txt','doc','rtf','odt','epub','csv'])
 app = Flask(__name__, template_folder = './')
 UPLOAD_FOLDER = './'
 app.config['UPLOAD_FOLDER']=UPLOAD_FOLDER
 stop_words = stopwords.words("english")
 extensions1 = ['jpg','png','jpeg','bmp','svg']
-extensions2= ['pdf','xps','epub']
+extensions2= ['pdf','xps']
 extensions3=['docx']
 ext4 =['txt']
+ext5 = ['doc','rtf','odt','epub','csv']
 pt.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 # route and function to handle the upload page
 @app.route('/', methods=['GET', 'POST'])
@@ -30,25 +32,33 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-           data=str(request.form['message'])
-           c = text(data)
-           q,t = sim(c)
-           if q == '':
-                replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
-            # extract the text and display it
-           return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
-        file = request.files['file']
-        # if no file is selected
-        if file.filename == '':
-            data=str(request.form['message'])
-            c = text(data)
+            data=str(request.form['text'])
+            if data == '':
+                dat = str(request.form['url'])
+                c = site(dat)
+            else:
+                c = text(data)
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
+                return render_template('plagiarismchecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
+        file = request.files['file']
+        # if no file is selected
+        if file.filename == '':
+            data=str(request.form['text'])
+            if data == '':
+                dat = str(request.form['url'])
+                c = site(dat)
+            else:
+                c = text(data)
+            q,t = sim(c)
+            if q == '':
+                replyy = 'Sorry Character could not be clearly recognized'
+                return render_template('plagiarismchecker.html', text=replyy)
+            # extract the text and display it
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -63,21 +73,30 @@ def upload():
                     c= docu(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 elif file.filename.rsplit('.',1)[1].lower() in ext4:
                    c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
+                elif file.filename.rsplit('.',1)[1].lower() in ext5:
+                   c = textract(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
-                    d= request.form.get('text')
-                    c = text(d)
+                    d= str(request.form['text'])
+                    if d:
+                        c=text(d)
+                    else:
+                        dat = str(request.form['url'])
+                        c = site(dat)  
             except IndexError:
-                d= request.form.get('text')
-                c=text(d)
-          
+                d= str(request.form['text'])
+                if d:
+                    c=text(d)
+                else:
+                    dat = str(request.form['url'])
+                    c = site(dat)          
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarism.html', text=replyy)
+                return render_template('plagiarismchecker.html', text=replyy)
             # extract the text and display it
-            return render_template('plagiarism.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
     
-    return render_template('plagiarism.html')
+    return render_template('plagiarismchecker.html')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
@@ -89,9 +108,21 @@ def txt(text):
     t = open(text,'r',encoding="utf-8", errors='ignore')
     jn = t.read()
     return jn
+def textract(filename):
+    n = textract.process(filename)
+    return n
 def text(text):
     t = text
     return t
+def site(url):
+    html_content = requests.get(url) 
+    soup = BeautifulSoup(html_content.content, 'html.parser')
+    v = soup.findAll('p')
+    bb=''
+    for x in range(len(v)):
+        vv = v[x].get_text()
+        bb = bb+' '+vv  
+    return bb
 def docu(filename):
     doc = docx.Document(filename)
     fullText = []
