@@ -114,7 +114,13 @@
 
                 
             </div>
-            
+            {%if text %}
+                <p>The text extracted is> <b> {{text}} </b></p>
+                {% else %}
+                No text
+                {% endif %}
+    
+                <script src="js/app.js" type=""></script>
           </div>
 
 
@@ -173,12 +179,6 @@ $(window).on("scroll", function() {
             })
         </script>
 
-                {%if text %}
-                <p>The text extracted is> <b> {{text}} </b></p>
-                {% else %}
-                No text
-                {% endif %}
-    
-                <script src="js/app.js" type=""></script>
+                
       </body>
 </html>
