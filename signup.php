@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
                            $result = mysqli_query($conn , $sql);
                     if($result){
                                     $message .= '<div class="alert alert-success" role="alert">
-                                    Record Saved Successfully <button class="btn"><a href = "login.php">Home</a></button></div>';
+                                    Record Saved Successfully <button class="btn"><a href = "index.html">Home</a></button></div>';
                                             echo ($message);
 
                     }
@@ -77,16 +77,17 @@ if(isset($_POST['submit'])){
     <html lang="en">
 
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Docufix | Signup</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/header&footer.css">
-        <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#333" />
+		<link rel="manifest" href="manifest.json" />
+        <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
+        <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
+         <link rel="manifest" href="manifest.json">
+        <title>Docufix | Signup</title>
+
         <style>
              body {
                  font-family: 'Rubik', sans-serif;
@@ -179,7 +180,6 @@ if(isset($_POST['submit'])){
                  font-size: 25px;
                  line-height: 30px;
                  margin-bottom: 1rem;
-                 margin-top: 100px;
              }
              
              .welcome {
@@ -187,7 +187,7 @@ if(isset($_POST['submit'])){
              }
              
              .Already-acc {
-                 margin-top: 10px;
+                 margin-top: 1em;
                  font-size: 18px;
                  line-height: 21px;
                  font-style: normal;
@@ -219,27 +219,10 @@ if(isset($_POST['submit'])){
 
 
     <body class="">
-        <header>
-          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
-            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto px-5">
-                <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
-                </li>
-                
-              </ul>
-            </div>
-          </nav>
-    </header>
 
         <section class="container login-section ">
 
-            <h3 class="text-center signUP">Welcome, create an account</h3>
+            <h3 class="text-center signUP">Signup</h3>
             <form class="form-align" method="POST" action="">
                 <div class="form-group col-md-4 ">
                     <input type="text" class="form-control" id="name" name="firstname" placeholder="First Name" pattern="[a-zA-Z]{1,}" data-toggle="tooltip" data-placement="bottom" title="Enter Your First Name" required><span class="error"></span>
