@@ -102,7 +102,7 @@
           width: 100% !important;
       } */
 #main {
-    background: #ffffff;
+    background: #ffffff !important;
     padding-bottom: 2em;
 }
 #navbarNavDropdown a,
@@ -169,7 +169,7 @@ textarea {
     #textareaBefore {
         border-right: 0 !important;
     }
-    .text{
+    .text {
         text-align: center;
         padding: 0;
     }
