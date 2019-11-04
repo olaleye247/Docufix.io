@@ -5,9 +5,6 @@ body{
 .content{
 	padding-top: 100px;
 }
-header .nav {
-	background: white !important;
-}
 .compare {
 	background: rgba(59, 31, 158, 0.05);
 	padding: 10px 10px;
