@@ -134,34 +134,29 @@
               
 
 
-              <div class="card-body" style="border-color: teal;">
+             <div class="card-body" style="border-color: teal;">
                 <textarea placeholder="Write your text here" class="" id="checktext" cols="" rows="10" style="border: 10; border-color: yellowgreen; background-color: black;" name="text"  
                 rows="6"></textarea>
               </div>
             </p>
-           
-             <div id = "keyslang">
+         <div id = "keyslang">
+            <table>
+                <tr><td>
+                <select name="lang" id="lang" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn">
+                    <option value="en-US">English</option>
+                    <option value="de-DE">German</option>
+                    <option value="it">Italian</option>
+                </select></td>
+               <td><input type="submit" name="_action_checkText"
+                    value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn"> </td></tr>
+               <tr><td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;"  class="b-btn comp-btn" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary"></td>
+                  <td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">
 
-                <table>
-
-                    <tr><td><select name="lang" id="lang" style="padding-left: 10px; padding-right: 10px;  background-color: #3b279d;; border-radius: 10px; height: 35px; width : 100px" class="b-btn comp-btn">
-                        <option value="en-US">English</option>
-                        <option value="de-DE">German</option>
-                        <option value="it">Italian</option>
-                    </select></td><td><input type="submit" name="_action_checkText"
-                      value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: #3b279d;; border-radius: 10px; height: 35px;" class="b-btn comp-btn"></td></tr>
-                    <tr><td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: #3b279d; border-radius: 10px; height: 35px;"  class="b-btn comp-btn" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary">
-                    </td><td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: #3b279d; border-radius: 10px; height: 35px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">
-                    </td></tr>
-                    </table>
-                
-                
-                 
-                   
+                   </td></tr>
+           </table>
                       
                     <div id="feedbackErrorMessage" style="color: red;"></div>
             </div>
-           
            
            
           </form>

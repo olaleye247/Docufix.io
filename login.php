@@ -22,9 +22,7 @@ if(isset($_POST['submit'])){
                 $_SESSION['loggedin'] = true;
                 $_SESSION['name'] = $result['firstname'];
                 $_SESSION['login_id'] = $result['id'];
-                $_SESSION['registered_date'] = $result['created_at'];
-                // $_SESSION['plan'] = $result['plan']
-                header("location: profile.php");
+                header("location: index.php");
             }
             else { 
                      $message = '<p class="text-warning">Invalid login credentials</p>';
@@ -49,17 +47,15 @@ if(isset($_POST['submit'])){
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#333" />
-    <link rel="manifest" href="manifest.json" />
-    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
-     <link rel="manifest" href="manifest.json">
-    <title>Docufix | Login</title>
-
+    <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Docufix | Log in</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/header&footer.css">
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
          body {
              font-family: 'Rubik', sans-serif;
@@ -156,6 +152,7 @@ if(isset($_POST['submit'])){
          
          .welcome {
              padding-bottom: 2em;
+             margin-top: 100px;
          }
          
          .Already-acc {
@@ -194,6 +191,23 @@ if(isset($_POST['submit'])){
 
 <body>
 
+    <header>
+          <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
+            <a class="navbar-brand px-sm-5 ml-3" href="index.html"><img src="https://res.cloudinary.com/kuic/image/upload/v1572638901/docufix/Docufix_Logo_lnsgsr.svg" alt="DOCUFIX" id="image"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto px-5">
+                <li class="nav-item">
+                  <a class="nav-link text-center" href="signup.php">Sign Up</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+    </header>
     <section class="container login-section ">
         <div class="text-center spacing">
 
@@ -208,9 +222,9 @@ if(isset($_POST['submit'])){
                 <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required><span class="error"></span>
             </div>
 
-            <!-- <div class="forgot__pass__link">
+            <div class="forgot__pass__link">
                 <a href="">Forgot Password?</a>
-            </div> -->
+            </div>
             <br>
             <!-- <button type="submit" class="btn btn-primary login-btn">Login</button> -->
             <input id="submitData" name="submit" type="submit" class="btn btn-primary login-btn" value = "Login"/>
