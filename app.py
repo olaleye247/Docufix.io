@@ -32,7 +32,7 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-            data= requests.get(url = URL, params = PARAMS)
+            data= str(request.form['text'])
             if not data:
                 dat = str(request.form['url'])
                 c = site(dat)
