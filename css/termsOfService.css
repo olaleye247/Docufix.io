@@ -10,13 +10,20 @@ body{
     padding: 0;
     width: 100%;
     height: 100%;
+    background-color: #ffffff;
+    
 }
 h1{
     font-size: 2em !important;
+    line-height: calc(33/16)em;
     color: rgba(12, 10, 90, 0.8) !important;
 }
+#Introduction h3{
+    font-size: 1.5em;
+    color: #ffffff !important;
+}
 h3{
-    color: rgba(12, 10, 90, 0.8) !important;
+    color: #3B1F9E !important;
 }
 .list-inline-item a{
     color:  #828282 !important;
@@ -32,4 +39,43 @@ p{
 a:hover{
     text-decoration: none !important;
     color: orange !important;
+}
+.btn-primary{
+    color: #3B1F9E !important;
+    background-color: #ffffff !important;
+    font-family: Nunito;
+font-style: normal;
+font-weight: bold !important;
+font-size: 14px;
+line-height: 19px;
+width: 227px;
+height: 40px;
+left: 398px;
+top: 249px;
+border: 1px solid #FFFFFF !important;
+border-radius: 20px !important;
+}
+#Introduction{
+    height: 403px;
+    background-color: #3B1F9E !important;
+    width: 100%;
+    margin-top: 5%;
+    z-index: -100000;
+}
+.navbar{
+    background-color: #3B1F9E;
+}
+.nav-link {
+    color: #FFFFFF !important;
+}
+.container{
+    z-index: 100000;
+    width: 80% !important;
+    background-color: #FFFFFF !important;
+border: 1px solid rgba(196, 196, 196, 0.4);
+border-radius: 10px;
+}
+.navbar-toggler-icon{
+    border-color: #FFFFFF !important;
+
 }
