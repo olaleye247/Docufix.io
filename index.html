@@ -3,8 +3,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie-edge" />
-    <meta name="theme-color" content="#3B1F9E" />
-    <link rel="manifest" href="manifest.json" />
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/thecavemann/image/upload/v1571839870/logo_g4kuoa.png"/>
@@ -12,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/header&footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>DOCUFIX</title>
+    <title>Docufix | Home</title>
 </head>
 <body>
     <!--Header-->
@@ -37,7 +35,6 @@
                     <a class="dropdown-item text-justify" href="grammarChecker.html">Grammar Check</a>
                     <a class="dropdown-item text-justify" href="fileDuplicate.html">Duplicates Check</a>
                     <a class="dropdown-item text-justify" href="plagiarismChecker.html">Plagiarism Check</a>
-                    <a class="dropdown-item text-justify" href="paraphrase.html">Paraphrasing tool</a>
                   </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -56,7 +53,7 @@
                     <a class="nav-link text-center" href="teampage.html">Our Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-center" href="login.php">Login</a>
+                  <a class="nav-link text-center" href="login.html">Login</a>
                 </li>
                 
               </ul>
@@ -70,18 +67,24 @@
                 <h3>Your Online Document Comparison Solution</h3>
                 <p>Compare documents content and find out the differences in each content of the files without much stress</p>
             </div>
-            <button class="b-btn comp-btn"><a href="./fileUpload.html">Compare files</a></button>
-            <button class="b-btn comp-btn"><a href="./fileDuplicate.html">Duplicates Check</a></button>
-            <button class="b-btn comp-btn"><a href="./grammarChecker.html">Grammar Check</a></button>
+            <div>
+                <button class="b-btn comp-btn"><a href="./fileUpload.html">Compare files</a></button>
+                <button class="b-btn dup-btn"><a href="./fileDuplicate.html">Check duplicates</a></button>
+            </div>
         </div>
 
         <div class="banner-img">
-            <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1572780850/workflow_kdglvx.png" alt="workflow" />
+            <img src="https://res.cloudinary.com/theonlybakare/image/upload/v1572801658/drawkit_hw20tz.png" alt="workflow" />
         </div>
     </section>
 
     <section class="content-wrapper ">
         <div class="content">
+            <!-- <div class="about-wrapper">
+                <h3>About Docufix</h3>
+                <div class="about-content-wrapper"></div>
+            </div> -->
+            
             <div class="feature-wrapper">
                 <h3>Features Of Docufix</h3>
                 <div class="feature-content-wrapper">
@@ -123,7 +126,7 @@
                                 <p><i class="fas fa-check basic-fa"></i><span class="pt">10</span> Plaigiarism Check</p>
                                 <p><i class="fas fa-check basic-fa"></i><span class="pt">5</span> Grammer Check</p>
                             </div>
-                            <button class="pbtn pbtn-1"><a href="signup.php">Select</a></button>
+                            <button class="pbtn pbtn-1"><a href="#">Select</a></button>
                         </div>
                     </div>
 
@@ -147,7 +150,7 @@
                                 <p><i class="fas fa-check pro-fa"></i>Free Ebooks</p>
                             </div>
 
-                            <button class="pbtn pbtn-2"><a href="signup.php">Select</a></button>
+                            <button class="pbtn pbtn-2"><a href="#">Select</a></button>
                     </div>
 
                     <div class="lower-plan" data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
@@ -166,9 +169,8 @@
                                 <p><i class="fas fa-check prem-fa"></i>Unlimited Users</p>
                                 <p><i class="fas fa-check prem-fa"></i>Unlimited Plaigiarism Check</p>
                                 <p><i class="fas fa-check prem-fa"></i>Unlimited Grammer Check</p>
-                                <p><i class="fas fa-check prem-fa"></i>Free Ebooks</p>
                             </div>
-                            <button class="pbtn pbtn-3"><a href="signup.php">Select</a></button>
+                            <button class="pbtn pbtn-3"><a href="#">Select</a></button>
                         </div>
                     </div>
                 </div>
@@ -183,13 +185,10 @@
                     <div class="subscribe-input">
                         <input type="email" placeholder="ENTER YOUR E-MAIL HERE" required />
                         <div>
-                            <a href=""><i class="fas fa-paper-plane"></i></a>
+                            <a href="#"><i class="fas fa-paper-plane"></i></a>
                         </div>
                     </div>
                 </div>
-                
-                <div class="sub-rectangle rec-1"></div>
-                <div class="sub-rectangle rec-2"></div>
             </div>
         </div>
     </section>
@@ -221,7 +220,7 @@
               </div>
               <p class="text-center">This app was built by <a href="https://hng.tech/" target="_blank">HNGi6</a> interns</p>
       </footer>
-    <script src="js/app.js"></script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
