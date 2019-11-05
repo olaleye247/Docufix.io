@@ -18,10 +18,10 @@
     
            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
      
-           <link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">
-           <link rel="stylesheet" type="text/css" href="css/fileupload.css">
+          <!--<link rel="stylesheet" type="text/css" href="./css/wysiwyg.css">-->
+           <!--link rel="stylesheet" type="text/css" href="css/fileupload.css">-->
            <link rel="stylesheet" type="text/css" href="css/grammarChecker.css">
-      		<link rel="stylesheet" href="css/main.css" />
+      		<!--link rel="stylesheet" href="css/main.css" />-->
 
           <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet" />
            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
@@ -30,24 +30,22 @@
              apiKey: "vXj90M2ifAvu8fS739jFKepTXtES72ur59sGR5TPK9c="
              </script>
       		
-      		</script>
+      	
 
        <style>
-       .b-btn{
-         color: white;
-       }
-
+       
        @media screen and (max-width: 600px) {
-        .bbtn{
-        font-size: 6px;
+        form{
+          height: 30%;
+        }
        }
-  }
+  
 
        </style>
    
 </head>
 
-<body style = "background-color: #c0c0c0">
+<body style = "background-color: #fafafa">
 
     <header>
           <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top">
@@ -103,19 +101,37 @@
 
 
 
-    <div class="container mt-5 pt-5" style="min-height: 100vh" >
+    <div class="container mt-5 pt-5" style="min-height: 100vh"  >
           
       <div class="row m-1">
-          <div class="col-md-7  ml-0 ml-md-4"  style="border: 1px solid rgb(245, 238, 238); background-color:rgba(59, 31, 158, 0.05)">
+          <div class="col-md-7  ml-0 ml-md-4"  style="border: 1px solid rgb(245, 238, 238); background-color:rgba(59, 31, 158, 0.05);">
               <div class="row pt-2">
                   <div class=" mx-auto bg-light my-auto " style="border-radius: 50%;height: 120px; min-width: 120px;color: white;"> </div>
                   <div class="col-md-8 p-2 text">
-                      <h4 class="font-weight-bold">Correct grammatical Errors:</h4>
-                      <p> Docufix Grammar and Spelling feature is a Technology to bring efficency in the construction of spoken and written grammar. Built solidly with the latest technical tools. </p>
-                    </div>
+                      <h4 class="font-weight-bold" style = "font-family: Nunito;
+                      font-style: normal;
+                      font-weight: 800;
+                      font-size: 24px;
+                      line-height: 33px;
+                     
+                      
+                      
+                      color: #3B1F9E;">Grammar Check</h4>
+                      <p style = "font-family: Nunito;
+                      font-style: normal;
+                      font-weight: bold;
+                      font-size: 14px;
+                      line-height: 19px;
+                      
+                      color: #3B1F9E;"> Docufix is one of the most innovative tecnology of our age. Built solidly with the latest technical tools for files and data management.</div>
               </div>
           </div>
-          <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2 bounce animated" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
+          <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2 bounce animated" style="width: 302px;height: 162px;
+          
+          
+         background: #F6F8F9;;
+          border: 1px solid rgba(222, 230, 234, 0.6);
+          box-sizing: border-box;">
                   <h5 class="mb-5" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
                   <a class="bt btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileUpload.html">Compare files</a>
                   <a class="bt btn-sm rounded-pill font-weight-bold mt-md-0 mt-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)" href = "fileDuplicate.html">Check Duplicates</a>
@@ -125,40 +141,49 @@
     <div>
 
 
-        <form name="checkform" action="http://community.languagetool.org" method="post" style = "padding: 20px; background-color:rgba(59, 31, 158, 0.1);"  id = "form">
-            <h1>GRAMMAR AND SPELLING CHECKER</h1>
+        <form name="checkform" action="http://community.languagetool.org" method="post" style = "padding: 20px; box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);"  id = "form">
             
+          
             
             <p id="checktextpara">
               
-              
+               <div class ="h">
+                  <table>
 
+                    <td> <tr><input type="button"  class="b-btn comp-btn bu" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary"></td>
+                    <!--<td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">-->
+  
+                     
+                    
+                    <select name="lang" id="lang" class="b-btn comp-btn bu">
+                        <option value="en-US">English</option>
+                        <option value="de-DE">German</option>
+                        <option value="it">Italian</option>
+                    </select></tr></td>
+                    </table>
 
-             <div class="card-body" style="border-color: teal;">
-                <textarea placeholder="Write your text here" class="" id="checktext" cols="" rows="10" style="border: 10; border-color: yellowgreen; background-color: black;" name="text"  
+                  </div>
+                  <br>
+                  
+                  <section style ="background-color: white";>
+          
+             <div class="card-body" name="text">
+                <textarea placeholder="Write your text here" class="" id="checktext" cols="" rows="10"   
                 rows="6"></textarea>
-              </div>
-            </p>
-         <div id = "keyslang">
-            <table>
-                <tr><td>
-                <select name="lang" id="lang" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn">
-                    <option value="en-US">English</option>
-                    <option value="de-DE">German</option>
-                    <option value="it">Italian</option>
-                </select></td>
-               <td><input type="submit" name="_action_checkText"
-                    value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn"> </td></tr>
-               <tr><td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;"  class="b-btn comp-btn" id ="b3" data-toggle="modal" data-target="#myModal"  value = "Dictionary"></td>
-                  <td> <input type="button" style="padding-left: 10px; padding-right: 10px; width: 100px; background-color: rgb(12, 10, 90); border-radius: 4px; height: 30px;" class="b-btn comp-btn" data-toggle="modal" data-target="#myModal2"  value ="Help">
-
-                   </td></tr>
-           </table>
+              </p>
+            </div>
+            
+         <div id = "keyslang" calss = "card-body" style="border-color: #cacaca; padding: 3px; border-style: solid; height: 100px">
+            <div style="padding-top:150px"></div>
+               <input type="submit" name="_action_checkText"
+                    value="Check Text" onClick="doit();return false;" style="padding-left: 10px; padding-right: 10px; width: 250px; background-color:  #3B1F9E; border-radius: 20px;
+box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05); height: 40px; color: white" class="b-btn comp-btn"> 
+               
                       
                     <div id="feedbackErrorMessage" style="color: red;"></div>
             </div>
            
-           
+          </section>
           </form>
 <br>
 <br>
