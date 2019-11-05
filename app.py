@@ -32,8 +32,8 @@ def upload():
     if request.method == 'POST':
         # check if there is a file in the request
         if 'file' not in request.files:
-            data=str(request.form['text'])
-            if data == '':
+            data= str(request.form['text'])
+            if not data:
                 dat = str(request.form['url'])
                 c = site(dat)
             else:
@@ -41,14 +41,14 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismchecker.html', text=replyy)
+                return render_template('plagiarismChecker.php', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.php', text='Result: '+q+', percentage match: '+t)
         file = request.files['file']
         # if no file is selected
         if file.filename == '':
             data=str(request.form['text'])
-            if data == '':
+            if not data:
                 dat = str(request.form['url'])
                 c = site(dat)
             else:
@@ -56,9 +56,9 @@ def upload():
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismchecker.html', text=replyy)
+                return render_template('plagiarismChecker.php', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.php', text='Result: '+q+', percentage match: '+t)
 
         if file and allowed_file(file.filename):
             fname = secure_filename(file.filename)
@@ -76,27 +76,17 @@ def upload():
                 elif file.filename.rsplit('.',1)[1].lower() in ext5:
                    c = textract(os.path.join(app.config['UPLOAD_FOLDER'], fname))
                 else:
-                    d= str(request.form['text'])
-                    if d:
-                        c=text(d)
-                    else:
-                        dat = str(request.form['url'])
-                        c = site(dat)  
+                   c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))
             except IndexError:
-                d= str(request.form['text'])
-                if d:
-                    c=text(d)
-                else:
-                    dat = str(request.form['url'])
-                    c = site(dat)          
+                c = txt(os.path.join(app.config['UPLOAD_FOLDER'], fname))        
             q,t = sim(c)
             if q == '':
                 replyy = 'Sorry Character could not be clearly recognized'
-                return render_template('plagiarismchecker.html', text=replyy)
+                return render_template('plagiarismChecker.php', text=replyy)
             # extract the text and display it
-            return render_template('plagiarismchecker.html', text='Result: '+q+', percentage match: '+t)
+            return render_template('plagiarismChecker.php', text='Result: '+q+', percentage match: '+t)
     
-    return render_template('plagiarismchecker.html')
+    return render_template('plagiarismChecker.php')
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 def picture(filename):
@@ -186,7 +176,8 @@ def word(c):
         e = check(m)
         results= google_search(e,my_api_key,my_cse_id,num=2)
         jj = []    
-        for result in results:   
+        for result in results:
+            try:
                url=result["link"]   
                html_content = requests.get(url) 
                soup = BeautifulSoup(html_content.content, 'html.parser')
@@ -196,6 +187,8 @@ def word(c):
                    vv = v[x].get_text()
                    bb = bb+' '+vv
                jj.append(bb)
+            except TypeError:
+                jj=[]
         gg.append(jj)
    elif len(tp)<2:
        gg =[]
