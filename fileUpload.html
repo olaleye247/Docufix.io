@@ -121,28 +121,36 @@
           </nav>
     </header>
         <!--Body-->
-        <div id="main">
-
-          
+        <div id="main" style="background-color: #ffffff;">
           
             <div class="container mt-5 pt-5" style="min-height: 100vh" >
-          
-                <div class="row m-1">
-                    <div class="col-md-7  ml-0 ml-md-4"  style="border: 1px solid rgb(245, 238, 238); background-color:rgba(59, 31, 158, 0.05)">
-                        <div class="row pt-2">
-                            <div class=" mx-auto bg-light my-auto " style="border-radius: 50%;height: 120px; min-width: 120px;color: white;"> </div>
-                            <div class="col-md-8 p-2 text">
-                                <h4 class="">Compare Files:</h4>
-                                <p> Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management. </p>
-                            </div>
+                <div class="row mx-auto">
+                  <div class="col-md-8">
+                    <div class="row" style="border: 1px solid rgb(245, 238, 238); background-color:rgba(59, 31, 158, 0.05)">
+                      <div class="col-md-2 p-3 mr-4">
+                        <div class=" bg-light pt-5 mx-auto mx-md-0 pr-md-5"  style="border-radius: 50%;height: 110px; width: 120px;color: white;"></div>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="pl-4 pt-4">
+                          <h4 class="  pl-0 font-weight-bold text">Compare Files</h4>
+                                  <p class="font-weight-bold text" style="max-width: 100%"> Docufix is one of the most innovative Technology of our age. Built solidly with the latest technical tools for file and data management. </p>
                         </div>
+                      </div>
                     </div>
-                    <div class="col-md-4 ml-0 ml-md-3 mt-4 mt-md-0 p-2" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
-                            <h5 class="mb-5" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
-                            <a class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
-                            <a class="btn btn-sm rounded-pill font-weight-bold mt-md-0 mt-sm-0 mt-xs-2" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
-                            <div class="btn float-right " style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
+                  </div>
+                  <div class="col-md-4 mt-3 mt-md-0">
+                    <div class="row pl-0 pl-md-2">
+                        <div class="mx-auto" style="border: 1px solid rgba(222, 230, 234, 0.6); background: #F6F8F9">
+                          <div class="p-4">
+                              <h5 class="pb-4 font-weight-bold" style="color: rgba(12, 10, 90, 0.8)">Other Tools:</h5>
+                              <a class="btn btn-sm rounded-pill font-weight-bold" style="color: rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Grammar check</a>
+                                          <a class="btn btn-sm rounded-pill font-weight-bold" style="color:rgba(12, 10, 90, 0.8);background-color: rgba(59, 31, 158, 0.05)">Check for Duplicates</a>
+                                          <div class="btn float-right" style="cursor: pointer;color: rgba(12, 10, 90, 0.8)"  onclick="instruction()">Instructions</div>
+                          </div>
+                       
+                      </div>
                     </div>
+                  </div>
                 </div>
               
               <div>
@@ -158,11 +166,11 @@
               </h2> -->
               <div class="row mt-5">
                   <div class="col-md-12 text-center">
-                    <div class="btn p-0 rounded-pill py-2" style=" background-color: rgba(59, 31, 158, 0.05)">
-                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill "
-                        style="text-decoration: none; margin-right: 10px;">File</span></div>
-                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill " 
-                        style="text-decoration: none; margin-left: 10px">Text
+                    <div class="btn p-0 rounded-pill py-2 m-0" style=" background-color: rgba(59, 31, 158, 0.05)">
+                      <div class="btn-sm btn rounded-pill active1 px-0"  id="fileBtn" ><span class=" px-5 py-3 rounded-pill m-0"
+                        style="text-decoration: none; margin-right: 10px;font-weight:  800;">File</span></div>
+                      <div class="btn-sm btn rounded-pill px-0"  id="textBtn" style="cursor: pointer"><span class="px-5 py-3 rounded-pill m-0" 
+                        style="text-decoration: none; margin-left: 10px;">Text
                       </span></div>
                   </div>
                   </div>
@@ -171,40 +179,67 @@
                 <div class="text-center mt-5">
                   <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
                     <div class="row mt-5">
-                      <div class="col-md-6">
+                      <div class="col-md-6" >
                         <div class="">
-                          <div class="card card-body   p-0 p-1" style="background-color: rgb(229, 236, 240);">
-                            <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-4 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                          <div class="card card-body   p-0 p-1" style="background:  #F6F8F9;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+                          ">
+                            <div style="border:  1px dashed #828282" class="pb-5 pt-5 ">
+                            <div class=" mx-auto bg-light  p-2 mt-5" style="border-radius: 50%;height: 100%; width: 20%"><img
                                 src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
                                 class="p-2" width="100%" ></div>
                             <div class="custom-file col-md-8 mx-auto pt-3" style="color: #0C105F">
                                 
-                              <label for="upload1" id="label1" class="text-center mr-md-5 pt-5"
-                                style=""> <div id="labell1" class="pb-3 pl-md-5" style=" color:#828282; cursor: pointer;font-weight: normal"></div><span  class="pl-md-5" style=" color:#828282; cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">Click to add file</span> 
+                              <label for="upload1" id="label1" class="text-center mr-md-5 "
+                                style=""> <div id="labell1" class="pb-3 " style=" color:#828282; cursor: pointer;font-weight: normal"></div><span  class=" font-weight-bold" style=" color:#828282; cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">&nbsp Click to add file</span> 
                                 <input id="upload1" type="file" name="file1" accept="" class="custom-file-input"
                                   style="border: 0;background-color:rgba(61, 155, 218, 0.4);position: absolute" required />
                                 <div class="invalid-feedback pl-md-5">
                                   No Images Allowed
                                 </div></label>
+                                <p  style=" color:#828282;" class="font-weight-bold mb-0">Or</p>
                                 <button style="color:  #828282;" id="uploadUrlBtn" type="submit" value="submit"
-                                class="btn btn-link"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">upload via URL</button>
+                                class="btn btn-link font-weight-bold"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">&nbsp Click to add URL link</button>
                             </div>
                           </div>
                         </div>
                         </div>
                       </div>
-                      <div class="col-md-6 mt-5 mt-md-0">
+                      <div class="col-md-6 mt-5 mt-md-0" >
+                        <div class="">
+                          <div class="card card-body   p-0 p-1" style="background-color: #F6F8F9;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+                          ">
+                            <div style="border:  1px dashed #828282" class="pb-5 pt-5 ">
+                            <div class=" mx-auto bg-light  p-2 mt-5" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
+                                class="p-2" width="100%" ></div>
+                            <div class="custom-file col-md-8 mx-auto pt-3" style="color: #0C105F">
+                                
+                              <label for="upload2" id="label2" class="text-center mr-md-5 "
+                                style=""> <div id="labell2" class="pb-3 " style=" color:#828282; cursor: pointer;font-weight: normal"></div><span  class=" font-weight-bold" style=" color:#828282; cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">&nbsp Click to add file</span> 
+                                <input id="upload2" type="file" name="file2" accept="" class="custom-file-input"
+                                  style="border: 0;background-color:rgba(61, 155, 218, 0.4);position: absolute" required />
+                                <div class="invalid-feedback pl-md-5">
+                                  No Images Allowed
+                                </div></label>
+                                <p  style=" color:#828282;" class="font-weight-bold mb-0">Or</p>
+                                <button style="color:  #828282;" id="uploadUrlBtn" type="submit" value="submit"
+                                class="btn btn-link font-weight-bold"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">&nbsp Click to add URL link</button>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-6 mt-5 mt-md-0">
                         <div class="pb-5">
                           <div class="card card-body p-0 p-1" style="background-color: rgb(229, 236, 240);">
-                            <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-3 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                            <div style="border:  1px dashed #828282" class="pb-5 pt-5">
+                            <div class=" mx-auto bg-light mt-5 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
                                 src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
                                 class="p-2" width="100%"></div>
                             <div class=" col-md-8 mx-auto pt-3">
                                 
-                              <label for="upload2" id="label2" class="text-center mr-md-5 pt-5"
-                                style=""><div id="labell2" class="pb-3 pl-md-5" style=" color:#828282;cursor: pointer;font-weight: normal"></div> <span  class="pl-md-5" style=" color:#828282;cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">Click to add file</span> 
+                              <label for="upload2" id="label2" class="text-center mr-md-5 "
+                                style=""><div id="labell2" class="pb-3 " style=" color:#828282;cursor: pointer;font-weight: normal"></div> <span  class=" font-weight-bold" style=" color:#828282;cursor: pointer;font-weight: normal"><img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset="">&nbsp Click to add file</span> 
                                 <input id="upload2" for="secondDocument" type="file" name="file2" accept=""
                                   class="custom-file-input m-0 p-0" style="border: 0;background-color: transparent;position: absolute" required />
                                   
@@ -212,15 +247,16 @@
                                 No Images Allowed
                               </div>
                                 </label>
+                                <p  style=" color:#828282;" class="font-weight-bold mb-0">Or</p>
                                 <button style="color:  #828282;" id="uploadUrlBtn" type="submit" value="submit"
-                          class="btn btn-link"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">upload via URL</button>
+                          class="btn btn-link font-weight-bold"><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt="">&nbsp Click to add URL link</button>
                             </div>
                             </div>
                         </div>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
-                    <div class="form-group" style="margin-bottom: 1em;">
+                    <div class="form-group mt-4" style="margin-bottom: 1em;">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadBtn" type="submit" value="submit"
                         class="btn text-light rounded-pill px-5">Compare</button>
           
@@ -235,11 +271,11 @@
                     <div class="row mt-5">
                       <div class="col-md-6">
                         <div class="">
-                          <div class="card card-body  p-0 p-1" style="background-color: rgb(229, 236, 240);">
+                          <div class="card card-body  p-0 p-1" style="background-color: #F6F8F9;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);">
                             <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-4" style="border-radius: 50%;height: 100%; width: 20%"><img
-                                src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg"
-                                class="p-2" width="100%"></div>
+                                <div class=" mx-auto bg-light mt-3 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                  src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
+                                  class="p-2" width="100%"></div>
           
           
                             <p class="font-weight-bold">Paste URL of the first file here</p>
@@ -259,11 +295,11 @@
                       </div>
                       <div class="col-md-6 mt-5 mt-md-0">
                         <div class="pb-5">
-                          <div class="card card-body  p-0 p-1"  style="background-color: rgb(229, 236, 240);">
+                          <div class="card card-body  p-0 p-1"  style="background-color: #F6F8F9;box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);">
                             <div style="border:  1px dashed #828282" class="pb-5">
-                            <div class=" mx-auto bg-light mt-4" style="border-radius: 50%;height: 100%; width: 20%"><img
-                                src="https://res.cloudinary.com/ademolamadelewi/image/upload/v1571838569/Vector1_d9algx.svg"
-                                class="p-2" width="100%"></div>
+                                <div class=" mx-auto bg-light mt-3 p-2" style="border-radius: 50%;height: 100%; width: 20%"><img
+                                  src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png"
+                                  class="p-2" width="100%"></div>
                             <p class="font-weight-bold">Paste URL of the second file here</p>
                             <div class="custom-file col-md-8 mx-auto" style="color: #0C105F">
                               <label for="url2" id="urlLabel2" class="text-left mr-md-5 "
@@ -282,7 +318,7 @@
                     </div>
                     <div class="form-group">
                       <button style="background-color:  #3B1F9E;color: white;" id="uploadViaUrlBtn" type="submit" value="submit"
-                        class="btn rounded-pill">Compare</button>
+                        class="btn rounded-pill px-5">Compare</button>
           
                         
                           
@@ -340,7 +376,7 @@
                 <div class="row card mt-4 m-1 mb-4" style="background-color: white">
                     <div class="row">
                         <div class="col-md-6 text-center  pr-md-0">
-                            <div class="card-header" style="border-bottom: 1px solid black;background-color: white">Original Text</div>
+                            <div class="card-header" style="border-bottom: 1px solid #C4C4C4;background-color: white">Original Text</div>
                             <div class="card-body p-0" >
                                 <textarea
                                     placeholder="1."
@@ -348,12 +384,12 @@
                                     id="textareaBefore"
                                     cols=""
                                     rows="20"
-                                    style="border-left:0;border-bottom: 1px solid black;border-top: 0"
+                                    style="border-left:0;border-bottom: 1px solid #C4C4C4;border-top: 0"
                                 ></textarea>
                             </div>
                         </div>
                         <div class="col-md-6 text-center pl-md-0 mt-4 mt-md-0">
-                            <div class="card-header" style="border-bottom: 1px solid black;background-color: white">
+                            <div class="card-header" style="border-bottom: 1px solid #C4C4C4;background-color: white">
                                 Duplicate Text
                             </div>
                             <div class="card-body p-0">
@@ -363,13 +399,13 @@
                                     id="textareaAfter"
                                     cols=""
                                     rows="20"
-                                    style="border:0;border-bottom: 1px solid black;border-top: 0"
+                                    style="border:0;border-bottom: 1px solid#C4C4C4;border-top: 0"
                                 ></textarea>
                             </div>
                         </div>
                         <div class="text-center col-md-12 m-3">
-                                <button value="compare" class="btn font-weight-bold text-light rounded-pill px-5"
-                                  style="background-color:  #3B1F9E;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
+                                <button value="compare" class="btn font-weight-bold  rounded-pill px-5"
+                                  style="background-color:   #EEEEEE;color:#333333;" type="submit" onclick="buttonCompareClicked();"> Compare</button>
                               </div>
                     </div>
                 </div>

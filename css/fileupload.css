@@ -102,7 +102,7 @@
           width: 100% !important;
       } */
 #main {
-    background: #e5e5e5;
+    background: #fafafa !important;
     padding-bottom: 2em;
 }
 #navbarNavDropdown a,
@@ -134,7 +134,7 @@ textarea {
     padding-right: 9em;
 }
 #textareaBefore {
-    border-right: 1px solid black !important;
+    border-right: 1px solid#C4C4C4 !important;
 }
 
 @media (max-width: 576px) {
@@ -168,6 +168,10 @@ textarea {
     }
     #textareaBefore {
         border-right: 0 !important;
+    }
+    .text {
+        text-align: center;
+        padding: 0;
     }
 }
 
