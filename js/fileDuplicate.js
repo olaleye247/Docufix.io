@@ -168,7 +168,7 @@ function getCookie(name) {
       document.getElementById("shareBtn").style.display = "block";
 
         e.preventDefault();
-      $('#resultArea').attr("style", "display:block");
+      // $('#textareaResult').attr("style", "display:block");
         let separators = [];
         let firstString = $('#textareaBefore').val()
         let delimiter = $('#delimiter').val();
@@ -303,7 +303,16 @@ $('#uploadURLForm').submit(function(e) {
   }
 })
   
+$('#resetbutton').click(function(e) {
+  e.preventDefault();
+  $('#textareaResult').html('');
+  $('#textareaResult').val('');
+  $('#textareaBefore').html('');
+  $('#textareaBefore').val('');
 
+
+  
+})
 
 
 function duplicateChecker(text, delimiter) {
@@ -339,6 +348,7 @@ function duplicateChecker(text, delimiter) {
 
   
   $('#textareaAfter').val(Object.keys(unique));
+  $('#textareaResult').val(Object.keys(unique));
   $("#textareaDifferences").val(Object.keys(unique));
   $("#textareaDifferences").html(Object.keys(unique));
 
@@ -347,3 +357,4 @@ function duplicateChecker(text, delimiter) {
 
 
 };
+

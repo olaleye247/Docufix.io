@@ -185,6 +185,10 @@
               <div id="file">
                 <div class="text-center mt-5">
                   <form class="mb-5" id="uploadForm" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                      <div class="col-md-6">
+
+                    
                     <div class="upload-container">
                             <div class="dotted-container">
                                 <div class="folder-logo">
@@ -197,7 +201,7 @@
                                                 <p id="file-uploaded"></p>
                                             <p id='buttonid' required>  <img class="img-fluid"  width="24" height="18" src="https://res.cloudinary.com/rammy/image/upload/v1572652721/Group.png" alt="" style="margin: auto" srcset=""> Click to add file </p> 
                                             <input id='upload1' name="file1"  type='file' required hidden/>
-                                            <input id="delimiter" for="delimiter" type="text" required name="delimiter" class="form-control delimterInput" placeholder="Enter Delimeter">
+                                            
                                             
                                             <a  href="#" id="uploadUrlBtn" ><img src="https://res.cloudinary.com/rammy/image/upload/v1572652721/uploadLogo.png" class="img-fluid"  alt=""> Click to add URL link</a>
                 
@@ -206,6 +210,12 @@
                         
                                 </div>
                         </div>
+                        </div>
+                        <div class="col-md-6 text-left delimiter-flex">
+                            <label for="delimiter">Enter Delimeter here</label>
+                            <input id="delimiter" for="delimiter" type="text" required name="delimiter" class="form-control delimterInput" placeholder="E.g:  , ; . ">
+                        </div>
+                    </div>
 
                  
                     <div class="form-group">
@@ -258,15 +268,26 @@
               <div id="status"></div>
               <div id="text" style="display: none;">
                 <form class="textDuplicate">
-                    <div class="card-header"">Original Text</div>
+                    <div class="row no-padding">
+                      <div class="col-md-6 no-padding text-center">
+                        <label for="textareaBefore">Enter Text</label>
+                        <textarea id="textareaBefore" required></textarea>
+                      </div>
+                      <div class="col-md-6 no-padding text-center">
+                        <label for="textareaResult">Result</label>
+                          <textarea id="textareaResult"></textarea>
+                      </div>
                     
-                    <textarea id="textareaBefore" required></textarea>
+                    </div>
+
                         <label for="delimiterText">Delimeter: </label>
                         <input id="delimiterText" type="text" class="form-control delimterInput" placeholder="Enter Delimeter" required>
                         
-                        <div class="text-center col-md-12 m-3">
-                            <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
-                        </div>
+                          <div class="button-container text-center">
+                              <button  class="btn font-weight-bold text-light rounded-pill px-5" style="background-color:  #3B1F9E;" type="submit" id="removeDuplicateText"> Remove Duplicate</button>
+                              <button class="btn rounded-pill resetBtn" id="resetbutton">Reset</button>
+                          </div>
+                            
                 </form>
                             </div>
                       <!-- <div class="row mt-5">
